@@ -2,30 +2,40 @@
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
-
-## Results
-
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
-
-* Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
-
-
-
-* Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
-
-## Summary
-
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
+Credit Risk Analysis Report :
+Overview:The purpose of this analysis is to develop and evaluate a machine learning model to assess the 
+    creditworthiness of borrowers using historical lending activity data from a peer-to-peer lending services 
+    company. The goal is to build a model that can effectively predict whether a loan is at high risk of 
+    defaulting or not.
+    
+    Model Evaluation Metrics:
+        •Accuracy Score: The accuracy of the model in predicting both healthy and high-risk loans.
+        •Precision Score: The percentage of correctly predicted high-risk loans out of all predicted high-risk loans.
+        •Recall Score: The percentage of correctly predicted high-risk loans out of all actual high-risk loans.
+            
+    Model Performance:
+        •Accuracy Score: The original logistic regression model achieved an accuracy score of 0.99 on the testing data. 
+            The resampled logistic regression model also achieved an accuracy score of 0.99.
+        •Precision Score (High-Risk Loans):
+            Original Model: 0.85
+            Resampled Model: 0.84
+        •Recall Score (High-Risk Loans):
+            Original Model: 0.91
+            Resampled Model: 0.99
+                
+    Summary and Recommendations: 
+        Both the original and resampled logistic regression models exhibited outstanding performance in predicting credit risk. 
+        Here are the key takeaways:
+            
+        Accuracy: Both models achieved a high accuracy of 0.99, indicating their ability to correctly predict the majority of loan statuses.
+        Precision: The precision score for predicting high-risk loans is relatively high for both models. The original model achieved a precision 
+            of 0.85, and the resampled model achieved a precision of 0.84. This means that when the models classify a loan as high risk, they are 
+            correct about 84% to 85% of the time.
+        Recall: The resampled model significantly outperformed the original model in terms of recall for high-risk loans. The original model achieved
+            a recall of 0.91, while the resampled model achieved a remarkable recall of 0.99. This indicates that the resampled model can effectively 
+            identify almost all actual high-risk loans.
+    Given the excellent accuracy, precision, and recall scores achieved by both models, it is recommended that the company use the resampled logistic 
+    regression model for assessing credit risk. The resampled model provides a more balanced performance by effectively capturing high-risk loans while 
+    maintaining high precision for both classes. Its high recall score suggests it's reliable in identifying loans with a high risk of default, which 
+    is crucial for mitigating potential losses. Therefore, the resampled logistic regression model is well-suited for practical use in the company's 
+    credit assessment process.
